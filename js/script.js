@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const input = document.querySelector('#input')
 
+    const result = document.querySelector('#result')
+
     function calculate(num1, num2, op){
         num1 = parseFloat(num1)
         num2 = parseFloat(num2)
@@ -67,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             exp_prev.innerHTML = firstOperating+' '+event.srcElement.innerHTML
             input.innerHTML = ''
         } else if (exp_prev.innerHTML.length > 0) {
+            operation = event.srcElement.innerHTML
             exp_prev.innerHTML = exp_prev.innerHTML.substring(0, exp_prev.innerHTML.length-1) + event.srcElement.innerHTML
         }
     })})
