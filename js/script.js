@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             operation = event.srcElement.innerHTML
             exp_prev.innerHTML = firstOperating+' '+event.srcElement.innerHTML
             input.innerHTML = ''
+        } else if (exp_prev.innerHTML.length > 0) {
+            exp_prev.innerHTML = exp_prev.innerHTML.substring(0, exp_prev.innerHTML.length-1) + event.srcElement.innerHTML
         }
     })})
 
